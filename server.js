@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
       <!doctype html>
       <html>
         <body>
-          <h1>QA Agent Dashboard</h1>
+          <h1>Legacy QA Dashboard</h1>
         </body>
       </html>
     `);
