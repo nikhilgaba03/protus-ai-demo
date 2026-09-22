@@ -24,14 +24,21 @@ const server = http.createServer((req, res) => {
 
   if (url.pathname === "/api/quote") {
     const cart = getDemoCart();
-    const quote = calculateQuote(cart);
+    const customerTier = url.searchParams.get("tier") || undefined;
+
+    const quote = calculateQuote(cart, {
+      customerTier,
+    });
 
     return json(res, 200, quote);
   }
 
   if (url.pathname === "/checkout") {
     const cart = getDemoCart();
-    const quote = calculateQuote(cart);
+
+    const quote = calculateQuote(cart, {
+      customerTier: undefined,
+    });
 
     res.writeHead(200, {
       "Content-Type": "text/html; charset=utf-8",
