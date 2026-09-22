@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
     });
 
     res.writeHead(200, {
-      "Content-Type": "text/html",
+      "Content-Type": "text/html; charset=utf-8",
     });
 
     res.end(renderCheckout(cart, quote));
@@ -50,7 +50,7 @@ const server = http.createServer((req, res) => {
 
   if (url.pathname === "/") {
     res.writeHead(200, {
-      "Content-Type": "text/html",
+      "Content-Type": "text/html; charset=utf-8",
     });
 
     res.end(`
