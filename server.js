@@ -1,5 +1,7 @@
 const http = require("http");
 
+const DASHBOARD_TITLE = "Legacy QA Dashboard";
+
 const server = http.createServer((req, res) => {
   if (req.url === "/") {
     res.writeHead(200, { "Content-Type": "text/html" });
@@ -7,7 +9,7 @@ const server = http.createServer((req, res) => {
       <!doctype html>
       <html>
         <body>
-          <h1>Legacy QA Dashboard</h1>
+          <h1>${DASHBOARD_TITLE}</h1>
         </body>
       </html>
     `);
