@@ -31,6 +31,10 @@ function renderCheckout(items, quote) {
             ${productRows}
           </ul>
 
+          <section aria-label="Membership">
+            <p>Loyalty savings are applied automatically for eligible members.</p>
+          </section>
+
           <section aria-label="Order summary">
             <p>
               Subtotal:
