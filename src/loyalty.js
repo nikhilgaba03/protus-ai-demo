@@ -5,8 +5,7 @@ function normalizeTier(tier) {
     return tier.trim().toLowerCase();
   }
 
-  // New loyalty rollout default.
-  return "gold";
+  return "standard";
 }
 
 function discountRateForTier(tier) {
