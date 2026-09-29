@@ -5,8 +5,8 @@ function normalizeTier(tier) {
     return tier.trim().toLowerCase();
   }
 
-  // New loyalty rollout default.
-  return "gold";
+  // Loyalty pricing is opt-in: requests without a tier remain standard.
+  return "standard";
 }
 
 function discountRateForTier(tier) {
